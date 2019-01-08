@@ -13,10 +13,9 @@ class Solution(object):
         elif root.right == None and root.left == None:
             return [root.val]
         else:
-            L = []
-            L += self.all_leaves(root.right)
-            L += self.all_leaves(root.left)
-            return L
+           
+            return self.all_leaves(root.right) + self.all_leaves(root.left)
+            
     
     def leafSimilar(self, root1, root2):
         """
